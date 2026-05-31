@@ -44,7 +44,7 @@ export type MFManifestInput = {
  *
  * This is what gives the shell TypeScript autocomplete when picking a component.
  */
-export type ComponentName<M extends { components: { name: string }[] }> =
+export type ComponentName<M extends { components: readonly { name: string }[] }> =
   M['components'][number]['name']
 
 export interface UniversalMF {
